@@ -1,6 +1,6 @@
 import "./portfolio.css";
 
-import IMG1 from "../../assets/Flexcavo.png";
+import IMG1 from "../../assets/perfume.png";
 import IMG2 from "../../assets/Meetnative.png";
 import IMG3 from "../../assets/Mobinspire.png";
 import IMG4 from "../../assets/Raise.png";
@@ -13,12 +13,12 @@ const Portfolio = () => {
   const soloProjects = [
     {
       id: 1,
-      title: "Flexcavo",
+      title: "PERFUME STORE",
       img: IMG1,
       description:
-        "It is the website for construction machine renting company (Flexcavo) from Berlin",
-      technologies: "React.js | Pixel-perfect | SCSS | Styled Component",
-      link: "https://www.flexcavo.de/",
+        "It is the website for PERFUMES",
+      technologies: "React.js | NODEJS | EXPRESS | MANGODB",
+      link: "newproject-brown-two.vercel.app",
     },
     {
       id: 2,

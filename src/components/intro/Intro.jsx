@@ -3,7 +3,7 @@ import "./intro.css";
 import { FaAward } from "react-icons/fa";
 import React from "react";
 import { VscFolderLibrary } from "react-icons/vsc";
-import img from "../../assets/Me.webp";
+import img from "../../assets/Me.webp.jpg";
 
 const Intro = () => {
   return (
@@ -21,16 +21,16 @@ const Intro = () => {
             <article className="about__card">
               <FaAward className="about__icon" />
               <h5>Experience</h5>
-              <small>5+ year</small>
+              <small>4 MONTHS</small>
             </article>
             <article className="about__card">
               <VscFolderLibrary className="about__icon" />
               <h5>Projects</h5>
-              <small>32+ Completed Projects</small>
+              <small>2+ Completed Projects</small>
             </article>
           </div>
           <p>
-            Able Full-stack Developer with over 6 years of expertise in building Web & Mobile applications development.
+            Able Full-stack Developer with over 4 Monthsof expertise in building Web  development.
             <br />
             My goal is to deliver efficient and effective solutions, and I adhere to the following principles in my work:
             <br />
