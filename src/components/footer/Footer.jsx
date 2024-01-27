@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer>
       <a href="#home" className="footer__logo">
-        Christian Montero
+        DAIM AHMAD
       </a>
       <ul className="permalinks">
         <li>
