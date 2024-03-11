@@ -1,11 +1,7 @@
 import "./portfolio.css";
 
 import IMG1 from "../../assets/perfume.png";
-import IMG2 from "../../assets/Meetnative.png";
-import IMG3 from "../../assets/Mobinspire.png";
-import IMG4 from "../../assets/Raise.png";
-import IMG5 from "../../assets/Potsave.png";
-import IMG6 from "../../assets/Health.png";
+
 import React from "react";
 
 //Portfolio function
@@ -20,51 +16,9 @@ const Portfolio = () => {
       technologies: "React.js | NODEJS | EXPRESS | MANGODB",
       link: "newproject-brown-two.vercel.app",
     },
-    {
-      id: 2,
-      title: "Meet Native",
-      img: IMG2,
-      description:
-        "MeetNative is an upselling platform that helps consumers and local businesses get more for their money.",
-      technologies: "React | React Native | Android | iOS",
-      link: "https://meetnative.com/",
-    },
-    {
-      id: 3,
-      title: "Mob Inspire",
-      img: IMG3,
-      description:
-        "Mob Inspire streamlines the business operations in corporate sector by providing cost-effective and highly productive software solutions.",
-      technologies: "Nginx | PHP | MySQL | jQuery",
-      link: "https://www.mobinspire.com/",
-    },
-    {
-      id: 4,
-      title: "Raise",
-      img: IMG4,
-      description:
-        "Get started with free educational courses to mastery the foundations of startup equity as an African business.",
-      technologies: "Remix | React.js | Webflow | jQuery",
-      link: "https://www.raise.africa/",
-    },
-    {
-      id: 5,
-      title: "Potsave",
-      img: IMG5,
-      description:
-        "Through the PotSave.com platform, PotSave offers in-person product assessment and ordering services, accessible via the website, mobile applications, and software.",
-      technologies: "React | Next.js | Lodash | Tailwind CSS",
-      link: "https://dev-pwa.potsave.com/",
-    },
-    {
-      id: 6,
-      title: "Health",
-      img: IMG6,
-      description:
-        "U of U Health is the Mountain West's only academic health care system. We provide patient care, medical research, and physician training.",
-      technologies: "Angular | Drupal | Nginx | TypeScript",
-      link: "https://healthcare.utah.edu/",
-    },
+  
+  
+   
   ];
 
   return (
