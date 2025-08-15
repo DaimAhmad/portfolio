@@ -8,30 +8,245 @@
     width: 100%;
     aspect-ratio: 1/1;
     border-radius: 2rem;
-    background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
+    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -30px; /* Move the image up */
+    margin-top: -30px;
+    box-shadow: var(--shadow-cyan);
+    position: relative;
+    overflow: hidden;
+}
+
+.about__me::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: transparent;
+    border-radius: 2rem;
+    z-index: -1;
+}
+
+.about__me::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    border-radius: 2rem;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .about__me-image {
     border-radius: 2rem;
     overflow: hidden;
-    transition: var(--transition);
-    width: 90%;                   /* ensures image doesn't overflow */
+    transition: all 0.4s ease;
+    width: 90%;
     height: 90%;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 3px solid var(--color-bg);
+    position: relative;
+    z-index: 2;
+}
+
+.about__me-image::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    background: var(--gradient-cyber);
+    background-size: 400% 400%;
+    border-radius: 2rem;
+    z-index: -1;
+    animation: gradientMove 4s ease infinite;
+    opacity: 0.8;
+}
+
+.about__me-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(0, 255, 255, 0.1) 50%, transparent 70%);
+    border-radius: 2rem;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .about__me-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top; /* Show the top part of the image */
+    object-position: center top;
     display: block;
+    border-radius: 1.5rem;
+    transition: all 0.4s ease;
+    filter: contrast(1.1) brightness(1.05);
+}
+
+.about__me:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-lg), 0 0 40px rgba(0, 255, 255, 0.4);
+}
+
+.about__me:hover .about__me-image {
+    transform: scale(1.05);
+}
+
+.about__me:hover .about__me-image img {
+    filter: contrast(1.2) brightness(1.1) saturate(1.1);
+}
+
+/* Futuristic geometric shapes */
+.about__me .futuristic-shape {
+    position: absolute;
+    z-index: 3;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.about__me .futuristic-shape.top-left {
+    top: -5px;
+    left: -5px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid var(--color-primary);
+    transform: rotate(-45deg);
+}
+
+.about__me .futuristic-shape.top-right {
+    top: -5px;
+    right: -5px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 25px solid var(--color-secondary);
+    transform: rotate(45deg);
+}
+
+.about__me .futuristic-shape.bottom-left {
+    bottom: -5px;
+    left: -5px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 25px solid var(--color-accent);
+    transform: rotate(45deg);
+}
+
+.about__me .futuristic-shape.bottom-right {
+    bottom: -5px;
+    right: -5px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 25px solid var(--color-success);
+    transform: rotate(-45deg);
+}
+
+.about__me .futuristic-shape.mid-top {
+    top: 50%;
+    left: -10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: var(--color-primary);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.about__me .futuristic-shape.mid-bottom {
+    bottom: 50%;
+    right: -10px;
+    transform: translateY(50%);
+    width: 20px;
+    height: 20px;
+    background: var(--color-secondary);
+    clip-path: polygon(50% 100%, 0% 0%, 100% 0%);
+}
+
+.about__me .futuristic-shape.mid-left {
+    left: 50%;
+    top: -10px;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: var(--color-accent);
+    clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+}
+
+.about__me .futuristic-shape.mid-right {
+    right: 50%;
+    bottom: -10px;
+    transform: translateX(50%);
+    width: 20px;
+    height: 20px;
+    background: var(--color-success);
+    clip-path: polygon(100% 50%, 0% 0%, 0% 100%);
+}
+
+/* Hover effects for shapes */
+.about__me:hover .futuristic-shape {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.about__me:hover .futuristic-shape.top-left {
+    transform: rotate(-45deg) scale(1.2);
+}
+
+.about__me:hover .futuristic-shape.top-right {
+    transform: rotate(45deg) scale(1.2);
+}
+
+.about__me:hover .futuristic-shape.bottom-left {
+    transform: rotate(45deg) scale(1.2);
+}
+
+.about__me:hover .futuristic-shape.bottom-right {
+    transform: rotate(-45deg) scale(1.2);
+}
+
+/* Scanning line effect */
+.about__me .scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+    animation: scanline 3s linear infinite;
+    z-index: 3;
+}
+
+@keyframes scanline {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
 }
 
 .about__cards {
