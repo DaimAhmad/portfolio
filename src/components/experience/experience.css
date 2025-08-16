@@ -1,3 +1,28 @@
+/* Add more spacing around the experience section */
+#experience {
+    margin-top: 10rem;
+    margin-bottom: 6rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* Style the section titles for better spacing */
+#experience h5 {
+    margin-bottom: 1.5rem;
+    color: var(--color-light);
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+#experience h2 {
+    margin-bottom: 4rem;
+    color: var(--color-white);
+    font-size: 2.5rem;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+}
+
 .experience__container {
     display: grid;
     grid-template-columns: 1fr;
@@ -43,7 +68,8 @@
 
 .experience__container > div h3 {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
     color: var(--color-primary);
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 1px;
@@ -54,13 +80,16 @@
 .experience__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    row-gap: 2rem;
+    row-gap: 2.5rem;
+    column-gap: 3rem;
+    padding: 1rem 0;
 }
 
 .experience__details {
     display: flex;
     gap: 1rem;
-    padding: 1rem;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
     border-radius: 1rem;
     background: rgba(0, 255, 255, 0.05);
     border: 1px solid rgba(0, 255, 255, 0.1);
